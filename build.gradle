@@ -1,0 +1,67 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+       classpath 'biz.aQute.bnd:biz.aQute.bnd.gradle:+'
+    }
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        mavenCentral()
+        url "http://cdn.repository.liferay.com/nexus/content/groups/public" 
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'biz.aQute.bnd.builder'
+
+dependencies {
+    compileOnly group: "com.liferay.portal",         name: "com.liferay.portal.kernel",   version: "2.0.0"
+    compileOnly group: "javax.servlet",              name: "servlet-api",                 version: "2.5"
+	compileOnly group: "javax.portlet",              name: "portlet-api",                 version: "2.0"
+    compileOnly group: "biz.aQute.bnd",              name: "biz.aQute.bndlib",            version: "3.1.0"
+	compileOnly group: "org.osgi",                   name: "org.osgi.compendium",         version: "5.0.0"
+ 
+	compile     group: 'com.github.kevinsawicki',    name: 'http-request',                version: '5.6'
+	compile     group: 'commons-dbutils',            name: 'commons-dbutils',             version: '1.6'
+}
+
+def bundleClassPath() {
+	def list = ['.']
+	configurations.compile.each {
+	  list += 'OSGI-INF/lib/' + it.name
+	}
+	return list.join(',')
+}
+
+def includeResource() {
+  def list = []
+  configurations.compile.each {
+	 list += 'OSGI-INF/lib/' + it.name + "=" + it.path
+  }
+  return list.join(',')
+}
+
+jar {
+    manifest {
+       attributes(
+            'Bundle-Version'       : '1.0.0',
+            '-buildpath'           : 'osgi.annotation; version=6.0.1,osgi.core; version=6.0,osgi.cmpn; version=6.0',
+            'Export-Package'       : 'org.jetscript',
+			'DynamicImport-Package': '*',
+            'Import-Package'       : 'javax.servlet.http,javax.servlet,*',
+			'Bundle-ClassPath'     : bundleClassPath(),
+			'-includeresource'     : includeResource()
+	   )
+    }
+}
+
+task deploy {
+   dependsOn build
+   doFirst {
+       new Deployer().deploy(jar.archivePath, true)
+   }
+}

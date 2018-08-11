@@ -7,7 +7,7 @@ JetScript is a tool for "Node-ish" Javascript-based development on Liferay DXP. 
 
 To install JetScript simply download a copy of the latest JAR from the releases page and drop into your Liferay DXP installation's deploy directly. That's it --- JetScript is now fully installed and ready for action.
 
-After installing JetScript you will notice a new, empty "*jetscript*" directory has been created in the root of your DXP base directory. This directory  will serve as the "root" for all subsequent JetScript development.
+After installing JetScript you will notice a new, empty *jetscript* folder has been created in the DXP base directory. This directory  will serve as the "root" for all subsequent JetScript development.
 
 ### Hello World
 
@@ -21,5 +21,5 @@ This example is one that you can begin with immediately after installing jetscri
 	
 Now open your browser and type in http://localhost:8080/o/jetscript/helloworld and you should see "Hello World" text returned. Now rename the file to echo.js, and enter the URL http://localhost:8080/o/jetscript/echo and you will see the same content. (The old URL should now return a 404). This demonstrates that by design the JetScript environment "hot loads" any changes to file names (and file contents) that occur between requests.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU1NDU5ODNdfQ==
+eyJoaXN0b3J5IjpbLTEzMjQ4Mzc3MThdfQ==
 -->

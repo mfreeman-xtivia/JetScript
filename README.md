@@ -19,8 +19,8 @@ This example is one that you can begin with immediately after installing jetscri
 	  _rsp.send("Hello World");
 	}
 	
-Now open your browser and type in http://localhost:8080/o/jetscript/helloworld and you should see "Hello World" text returned. Now rename the file to echo.js, and enter the URL http://localhost:8080/o/jetscript/echo and you will see the same content. (The old URL should now return a 404). This demonstrates that by design the JetScript environment "hot loads" any changes to file names (and file contents) that occur between requests. We will see in later examples that we can also include functions to handle POST, PUT, and DELETE requests in our Javascript. And finally, its important to note that the actual Javascript implementation is provided by the Nashorn engine included with the JDK so you have a rich set of Java libraries available to 
+Now open your browser and type in http://localhost:8080/o/jetscript/helloworld and you should see "Hello World" text returned. Now rename the file to echo.js, and enter the URL http://localhost:8080/o/jetscript/echo and you will see the same content. (The old URL should now return a 404). This demonstrates that by design the JetScript environment "hot loads" any changes to file names (and file contents) that occur between requests. We will see in later examples that we can also include functions to handle POST, PUT, and DELETE requests in our Javascript. And finally, its important to note that the actual Javascript implementation is provided by the Nashorn engine included with the JDK so you have a rich set of Java libraries available to you fo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMzE2OTY0OCw3OTY5MzMzMCw0MDUwMj
-MyMzAsLTEwNzMxMTY5NTMsODU1Njk3ODAyXX0=
+eyJoaXN0b3J5IjpbLTE0MDYzODM5NCwxMDEzMTY5NjQ4LDc5Nj
+kzMzMwLDQwNTAyMzIzMCw4NTU2OTc4MDJdfQ==
 -->

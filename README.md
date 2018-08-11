@@ -19,7 +19,7 @@ This example is one that you can begin with immediately after installing jetscri
 	  _rsp.send("Hello World");
 	}
 	
-Now open your browser and type in http://localhost:8080/o/jetscript/helloworld and you should see "Hello World" text returned. Now rename the file to echo.js, and enter the URL http://localhost:8080/o/jetscript/echo and you will see the same content. (The old URL should now return a 404). This demonstrates that by design the JetScript environment "hot loads" any changes to file names (and file content) that occur between requests.
+Now open your browser and type in http://localhost:8080/o/jetscript/helloworld and you should see "Hello World" text returned. Now rename the file to echo.js, and enter the URL http://localhost:8080/o/jetscript/echo and you will see the same content. (The old URL should now return a 404). This demonstrates that by design the JetScript environment "hot loads" any changes to file names (and file contents) that occur between requests.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NjAyMzM4LC0xNDc2NTMyNTQ5XX0=
+eyJoaXN0b3J5IjpbMzM5MDQ2NzksLTE0NzY1MzI1NDldfQ==
 -->

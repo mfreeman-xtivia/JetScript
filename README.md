@@ -1,4 +1,4 @@
-##JetScript
+## JetScript
 A lightweight environment for JavaScript in Liferay DXP
 
 JetScript is a tool for "Node-ish" Javascript-based development on Liferay DXP. **JetScript is not intended for production use** -- rather it is seen as a easy-to-use tool/environment for prototyping services and SPAs,and for writing quick administration and development tools.
@@ -20,3 +20,6 @@ This example is one that you can begin with immediately after installing jetscri
 	}
 	
 Now open your browser and type in http://localhost:8080/o/jetscript/helloworld and you should see "Hello World" text returned. Now rename the file to echo.js, and enter the URL http://localhost:8080/o/jetscript/echo and you will see the same content. (The old URL should now return a 404). This demonstrates that by design the JetScript environment loads changes to file names (and file content) that occur between requests.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE0NzY1MzI1NDldfQ==
+-->

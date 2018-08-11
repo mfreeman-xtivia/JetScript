@@ -11,7 +11,7 @@ After installing JetScript you will notice a new, empty *jetscript* folder has b
 
 ### Hello World
 
-This example is one that you can begin with immediately after installing jetscript. Simply create a new file named helloworld.js in the newly created *jetscript* directory that looks like the code below:
+This example is one that you can begin with immediately after installing jetscript. Simply create a new file named helloworld.js in the newly created *jetscript* directory and add the code below:
 
 	function doGet() {
 	  _rsp.status(200);
@@ -21,5 +21,5 @@ This example is one that you can begin with immediately after installing jetscri
 	
 Now open your browser and type in http://localhost:8080/o/jetscript/helloworld and you should see "Hello World" text returned. Now rename the file to echo.js, and enter the URL http://localhost:8080/o/jetscript/echo and you will see the same content. (The old URL should now return a 404). This demonstrates that by design the JetScript environment "hot loads" any changes to file names (and file contents) that occur between requests.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEzMTc4NDQ2XX0=
+eyJoaXN0b3J5IjpbODU1Njk3ODAyLDcxMzE3ODQ0Nl19
 -->
